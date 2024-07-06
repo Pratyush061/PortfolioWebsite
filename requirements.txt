@@ -1,0 +1,10 @@
+streamlit
+Pillow
+requests
+streamlit-lottie
+streamlit-timeline
+google-generativeai
+streamlit-navigation-bar
+pandas
+numpy
+plotly
