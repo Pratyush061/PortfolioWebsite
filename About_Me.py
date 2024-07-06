@@ -8,7 +8,7 @@ api_key="AIzaSyC83C8rwcxdmSsR5b4bUj_EjywHCsmn9gE"
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 # Load the image
-image_path = 'images/About_Me.jpeg'
+image_path = 'About_Me.jpeg'
 
 text = ("Hello! I'm Pratyush Jain, a passionate"
         " B.Tech student specializing in Information Technology at"
