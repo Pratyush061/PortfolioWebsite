@@ -8,3 +8,4 @@ streamlit-navigation-bar
 pandas
 numpy
 plotly
+matplotlib
