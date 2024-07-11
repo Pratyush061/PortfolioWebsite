@@ -1,0 +1,36 @@
+.heading h1{
+  font-size: 35px; /* Adjust font size for better readability */
+  color: #333; /* Text color */
+  font-family: 'sans-serif'
+
+}
+
+
+
+.typewriter h1{
+  display: block;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Centers the container */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 4s steps(40, end),
+    blink-caret .75s step-end infinite;
+  font-size: 1.8em; /* Adjust font size for better readability */
+  color: #333; /* Text color */
+  font-family: 'Courier New', Courier, monospace; /* Typewriter-like font */
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
+
