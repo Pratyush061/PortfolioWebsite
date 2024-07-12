@@ -57,9 +57,22 @@ st.markdown("""
     <div class="project-title">OpenCV AI Virtual Keyboard | OpenCV, MediaPipe, PyAutoGUI</div>
     <div class="project-details">
         <ul>
+           <li>Taking inspiration from Murtaza Sir YouTube channel I developed and customized the AI virtual keyboard  </li>
             <li>Developed a Virtual Keyboard using Computer Vision with real-time webcam feed integration, hand tracking, gesture recognition, and keyboard control.</li>
             <li>Implemented functionality for keypress detection and text input based on hand gestures.</li>
             <li>Provided dynamic background options for user customization.</li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="project-title">Image Classification System | Python, TensorFlow, OpenCV, Deep Learning</div>
+    <div class="project-details">
+        <ul>
+            <li>Built a data pipeline for image processing.</li>
+            <li>Preprocessed images for deep learning using OpenCV.</li>
+            <li>Created a deep neural network classifier with TensorFlow.</li>
+            <li>Evaluated model performance through training and validation metrics.</li>
+            <li>Deployed the model and tested with new data.</li>
         </ul>
     </div>
 </div>
@@ -67,12 +80,14 @@ st.markdown("""
 
 
 st.subheader(" ")
-st.subheader("Other Projects By me")
+st.subheader("Miscellaneous Projects By me")
 
 
 
 # Load the selected page
 load_page(page)
+
+st.subheader("And the list goes on....")
 
 
 
