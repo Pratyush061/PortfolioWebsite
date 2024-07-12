@@ -17,9 +17,6 @@ api_key="AIzaSyC83C8rwcxdmSsR5b4bUj_EjywHCsmn9gE"
 
 model = genai.GenerativeModel('gemini-1.5-flash')
 
-# Load the image
-image_path = 'images/About_Me.jpeg'
-
 
 text = (
         "Passionate Data Scientist | "
@@ -177,7 +174,7 @@ with st.container(border=True):
     You are Pratyush AI bot. You help people answer questions about your self (i.e Murtaza)
     Answer as if you are responding . dont answer in second or third person.
     If you don't know they answer you simply say "That's a secret"
-
+    
 
     Pratyush Jain is a dedicated and enthusiastic B.Tech student specializing in Information Technology at Shri G.S. Institute Of Technology And Science, Indore, Madhya Pradesh. With a passion for technology and innovation, he has developed strong skills in programming, data structures, algorithms, and several key areas of computer science. He is proficient in languages such as C, C++, and Python, and well-versed in libraries and frameworks like Pandas, NumPy, NLTK, Sklearn, OpenCV, MediaPipe, and Matplotlib.
 
@@ -185,7 +182,16 @@ with st.container(border=True):
 
     Recognized for his problem-solving abilities, Pratyush is a 4-star coder on HackerRank and has received bronze medals on Kaggle for his contributions to notebooks and discussions. His commitment to continuous learning and excellence in the field of computer science is evident in his academic and extracurricular achievements.
     
-    
+    Pratyush also loves to read books he has read 50+ books.Some of his favourites include:
+    Atomic Habits
+    Ikigai
+    Linchpin
+    Rich Dad Poor Dad
+    Eat That Frog
+    Mindset
+    Zero to One-A note on startups
+    The Defining Decade: Why Your Twenties Matter
+
     Pratyush is based in Ujjain, Madhya Pradesh, and can be contacted via email at pratyushjj02@gmail.com. You can find more about his professional journey on LinkedIn, GitHub, and Kaggle. He is eager to connect with like-minded professionals and contribute to innovative projects.
 
     Contact Information:
@@ -256,3 +262,142 @@ with st.container(border=True):
 # Display the pie chart with burst effect
     st.plotly_chart(fig)
 
+import streamlit as st
+
+# Define CSS for styling the sections
+css = """
+<style>
+
+/* Bounce In Animation */
+@keyframes section-animation {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.7;
+    }
+    70% {
+        transform: scale(0.9);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+/* Apply animations to the containers with delay */
+.container:nth-child(1) .content {
+    animation: bounce-in 1s forwards;
+}
+
+ .section {
+        padding: 10px;
+        background-color: #a5f9f9;
+        border-radius: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.08);
+        animation: section-animation 0.5s ease-out;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+  .section:hover {
+        transform: translateX(10px) translateY(-10px);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2), 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    .project-title {
+        font-size: 16px;
+
+        font-weight: bold;
+        text-decoration: underline;
+        color: #333;
+        font-family:Calibri, sans-serif
+    }
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Inter';
+}
+
+/* Technical Skills and Achievements */
+.section {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.section ul li {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  padding-left: 20px;
+  position: relative;
+}
+
+.section ul li::before {
+  content: '•';
+  color: #0073e6;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+</style>
+"""
+
+# HTML for the technical skills section
+technical_skills_html = """
+<div class="section">
+    <h2>Technical Skills:</h2>
+    <ul>
+        <li>Python</li>
+        <li>Machine Learning</li>
+        <li>Data Science</li>
+        <li>Natural Language Processing (NLP)</li>
+        <li>Computer Vision</li>
+        <li>Streamlit</li>
+        <li>Pandas</li>
+        <li>NumPy</li>
+        <li>Plotly</li>
+    </ul>
+</div>
+"""
+
+# HTML for the achievements section
+achievements_html = """
+<div class="section">
+    <h2>Achievements:</h2>
+    <ul>
+        <li>4 🌟 Star coder in problem solving at Hacker rank</li>
+        <li>Got Bronze medals for Notebooks Contributor and Discussions Contributor at Kaggle.</li>
+    </ul>
+</div>
+"""
+
+# Render the CSS and HTML in Streamlit
+st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
+st.markdown(technical_skills_html, unsafe_allow_html=True)
+st.markdown(achievements_html, unsafe_allow_html=True)
