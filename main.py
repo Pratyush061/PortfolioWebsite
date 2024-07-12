@@ -17,7 +17,7 @@ import numpy as np
 import plotly.express as px
 
 # Set up the navigation bar
-pages = ["Home", "About Me","Projects","Gallery","Contact Me"]
+pages = ["Home", "About Me","Projects","Contact Me"]
 
 # In about me section you can add your own custom chatbot.
 page = st_navbar(pages)
@@ -25,7 +25,7 @@ page = st_navbar(pages)
 # Define a function to handle navigation
 def load_page(page_name):
     if page_name == "Home":
-        with open("NewHome.py", encoding="utf8") as f:
+        with open("Home.py", encoding="utf8") as f:
             exec(f.read(), globals())
     elif page_name=="About Me":
         st.markdown("# Hi 👏🏿")
@@ -34,6 +34,10 @@ def load_page(page_name):
     elif page_name == "Projects":
         st.markdown("# Projects")
         with open("Projects.py", encoding="utf8") as f:
+            exec(f.read(), globals())
+    elif page_name == "Contact Me":
+        st.markdown("# Contact Me")
+        with open("Contact_Me.py", encoding="utf8") as f:
             exec(f.read(), globals())
 
 # Load the selected page
