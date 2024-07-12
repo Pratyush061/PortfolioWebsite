@@ -32,11 +32,11 @@ def load_page(page_name):
         with open("About_Me.py", encoding="utf8") as f:
             exec(f.read(), globals())
     elif page_name == "Projects":
-        st.markdown("# Projects")
+        st.title("Projects 🪄")
         with open("Projects.py", encoding="utf8") as f:
             exec(f.read(), globals())
     elif page_name == "Contact Me":
-        st.markdown("# Contact Me")
+        st.title("Contact Me 📞")
         with open("Contact_Me.py", encoding="utf8") as f:
             exec(f.read(), globals())
 
