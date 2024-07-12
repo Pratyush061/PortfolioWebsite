@@ -28,11 +28,9 @@ info = {
    "Name": "Pratyush",
    "Full_Name": "Pratyush Jain",
    "Intro": "A passionate Data Scientist and Computer Vision Engineer",
-   "About":"I am passionate about computers and i vouch for them i have made several project in the field on Computer Vision and Natural Language processing ",
-   "Tableau":"https://public.tableau.com/app/profile/vickytc/viz/SunnybrookTeam/Overview",
-   "Medium":"https://medium.com/@vicky-note/about",
+   "About":"Student⚜️Freelancer⚜️Youtuber⚜️Avid book reader",
+
    "City":"Indore, India",
-   "Photo":"""<a href=\"https://www.linkedin.com/in/vicky-tck/\"><img src=\"https://sn-assets.s3.us.cloud-object-storage.appdomain.cloud/projects/profile.png" width=\"200\"   alt=\"Profile\" title=\"Profile\"></a>""",
    "Email": "pjdev02@gmail.com"
 }
 
@@ -50,9 +48,9 @@ def load_lottieurl(url: str):
 # Apply local CSS styles from a file
 def local_css(file_name):
     with open(file_name) as f:
-        st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-#local_css("style/style.css")
+local_css("container.css")
 
 # # Load Lottie animations
 lottie_gif = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_x17ybolp.json")
@@ -70,22 +68,14 @@ webd = load_lottieurl("https://lottie.host/2e31f940-2dd6-4db0-aa6a-d31e7961ad48/
 with open("images/Home.jpg", "rb") as img_file:
     img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
 
-#st.image(img)
 
-# CSS styles file
-with open("container.css") as f:
-   st.write(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-
-
-# Embedding the HTML with CSS class#
 # Embedding the HTML with CSS class for each container
 
 st.markdown(f"""
 <div class="container">
     <div class="content">
         <div class="text">
-            <h1>Hi I am Pratyush Jain!!</h1>
+            <h1>PRATYUSH JAIN.👨🏻‍💻 & 🍵</h1>
         </div>
     </div>
 </div>
