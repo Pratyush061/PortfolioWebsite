@@ -19,6 +19,23 @@ import plotly.express as px
 # Set up the navigation bar
 pages = ["Home", "About Me","Projects","Contact Me"]
 
+EXPANDER_TEXT = """
+    This is a custom theme. You can enable it by copying the following code
+    to `.streamlit/config.toml`:
+
+    ```python
+    [theme]
+primaryColor="#8c1111"
+backgroundColor="#f7fff7"
+secondaryBackgroundColor="#c1e1c1"
+textColor="#000000"
+    ```
+    """
+st.write(EXPANDER_TEXT)
+
+
+
+
 # In about me section you can add your own custom chatbot.
 page = st_navbar(pages)
 
