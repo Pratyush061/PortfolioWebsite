@@ -9,12 +9,13 @@ import streamlit.components.v1 as components
 import google.generativeai as genai
 import os
 from streamlit_navigation_bar import st_navbar
-from io import BytesIO
-import streamlit as st
 import time
 import pandas as pd
 import numpy as np
 import plotly.express as px
+
+# Set page configuration - Add this at the top
+st.set_page_config(page_title="LiveCV", layout="wide")
 
 # Set up the navigation bar
 pages = ["Home", "About Me","Projects","Contact Me"]
